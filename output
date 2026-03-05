@@ -1,0 +1,15 @@
+digraph {
+	graph [filename="Automaton finit determinist" label="Automaton finit determinist" rankdir=LR]
+	"" [shape=point]
+	"{frozenset({'10', '12'})}" [shape=doublecircle]
+	"{frozenset({'5', '9', '6', '12', '8', '11', '2', '3', '1'}),frozenset({'5', '9', '6', '12', '8', '11', '3', '4', '1'})}" [shape=doublecircle]
+	"{frozenset({'1', '5', '7', '3'})}" [shape=oval]
+	"{frozenset({'null'})}" [shape=oval]
+	"" -> "{frozenset({'1', '5', '7', '3'})}"
+	"{frozenset({'1', '5', '7', '3'})}" -> "{frozenset({'5', '9', '6', '12', '8', '11', '2', '3', '1'}),frozenset({'5', '9', '6', '12', '8', '11', '3', '4', '1'})}" [label="['a', 'b']"]
+	"{frozenset({'1', '5', '7', '3'})}" -> "{frozenset({'null'})}" [label="['c']"]
+	"{frozenset({'5', '9', '6', '12', '8', '11', '2', '3', '1'}),frozenset({'5', '9', '6', '12', '8', '11', '3', '4', '1'})}" -> "{frozenset({'5', '9', '6', '12', '8', '11', '2', '3', '1'}),frozenset({'5', '9', '6', '12', '8', '11', '3', '4', '1'})}" [label="['a', 'b']"]
+	"{frozenset({'5', '9', '6', '12', '8', '11', '2', '3', '1'}),frozenset({'5', '9', '6', '12', '8', '11', '3', '4', '1'})}" -> "{frozenset({'10', '12'})}" [label="['c']"]
+	"{frozenset({'10', '12'})}" -> "{frozenset({'null'})}" [label="['a', 'b', 'c']"]
+	"{frozenset({'null'})}" -> "{frozenset({'null'})}" [label="['a', 'b', 'c']"]
+}
